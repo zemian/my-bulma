@@ -20,5 +20,17 @@
     </div>
 </div>
 
+<script src="node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                message: "Hello"
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
 </body>
 </html>
