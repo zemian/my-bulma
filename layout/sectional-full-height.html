@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS - Layout</title>
+</head>
+<body>
+
+<!-- Use JS to calculate min-height to be full screen height -->
+<div class="section" style="background-color: lightsalmon;" :style="{'min-height': screenHeight}">
+    <div class="container">
+        <figure class="image is-5by3">
+            <img src="https://bulma.io/images/placeholders/800x480.png">
+        </figure>
+    </div>
+</div>
+
+<div class="section" style="background-color: lightblue;" :style="{'min-height': screenHeight}">
+    <div class="container">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam asperiores culpa delectus, ducimus, earum, expedita hic id impedit ipsum magnam mollitia nemo obcaecati porro quo sapiente voluptate voluptates voluptatum.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background-color: lightpink;" :style="{'min-height': screenHeight}">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="notification is-primary" style="height: 300px;"></div>
+            </div>
+            <div class="column">
+                <div class="notification is-warning" style="height: 300px;"></div>
+            </div>
+            <div class="column">
+                <div class="notification is-danger" style="height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                screenHeight: null,
+            }
+        },
+        created() {
+            this.screenHeight = window.screen.height + 'px';
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
+</body>
+</html>
