@@ -11,7 +11,7 @@
 <body>
 
 <!-- Requires JS Support -->
-<div id="app" class="section">
+<div class="section">
     <div class="container block">
         <button class="button" @click="modalIsActive = !modalIsActive">Open</button>
         <div class="modal" :class="{'is-active': modalIsActive}">
@@ -35,7 +35,7 @@
             }
         }
     };
-    Vue.createApp(app).mount('#app');
+    Vue.createApp(app).mount('body');
 </script>
 
 </body>
