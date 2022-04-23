@@ -11,21 +11,22 @@
 <body>
 
 <!-- Requires JS Support -->
-<div class="section">
+<div id="app" class="section">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
                 <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
             </a>
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+                :class="{'is-active': menuIsActive}" @click="menuIsActive = !menuIsActive">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': menuIsActive}">
             <div class="navbar-start">
                 <a class="navbar-item">
                     Home
@@ -73,6 +74,18 @@
         </div>
     </nav>
 </div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                menuIsActive: false
+            }
+        }
+    };
+    Vue.createApp(app).mount('#app');
+</script>
 
 </body>
 </html>
