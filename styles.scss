@@ -1,2 +1,5 @@
 @charset "utf-8";
+
+// NOTE: The SCSS/SASS must work with local files. You can't just import an external file
+// from CDN. It will not compile this way.
 @import "node_modules/bulma/bulma.sass";
