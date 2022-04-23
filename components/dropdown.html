@@ -15,9 +15,9 @@
     <div class="container block">
         <div class="columns">
             <div class="column is-one-third is-offset-one-third">
-                <div class="dropdown" :class="{'is-active' : demo1IsActive}">
+                <div class="dropdown" :class="{'is-active' : dropDown1IsActive}">
                     <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" @click="demo1IsActive = !demo1IsActive">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" @click="dropDown1IsActive = !dropDown1IsActive">
                             <span>Dropdown button</span>
                             <span class="icon is-small">
                                 <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -52,9 +52,9 @@
     <div class="container block">
         <div class="columns">
             <div class="column is-one-third is-offset-one-third">
-                <div class="dropdown" :class="{'is-active' : demo2IsActive}">
+                <div class="dropdown" :class="{'is-active' : dropDown2IsActive}">
                     <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2" @click="demo2IsActive = !demo2IsActive">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2" @click="dropDown2IsActive = !dropDown2IsActive">
                             <span>Content</span>
                             <span class="icon is-small">
                                 <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -111,8 +111,8 @@
     const app = {
         data() {
             return {
-                demo1IsActive: false,
-                demo2IsActive: false
+                dropDown1IsActive: false,
+                dropDown2IsActive: false
             }
         }
     };

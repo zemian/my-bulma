@@ -13,13 +13,13 @@
 <!-- Requires JS Support -->
 <div id="app" class="section">
     <div class="container block">
-        <button class="button" @click="demo1IsActive = !demo1IsActive">Open</button>
-        <div class="modal" :class="{'is-active': demo1IsActive}">
+        <button class="button" @click="modalIsActive = !modalIsActive">Open</button>
+        <div class="modal" :class="{'is-active': modalIsActive}">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
                     <p class="modal-card-title">Modal title</p>
-                    <button class="delete" aria-label="close" @click="demo1IsActive = !demo1IsActive"></button>
+                    <button class="delete" aria-label="close" @click="modalIsActive = !modalIsActive"></button>
                 </header>
                 <section class="modal-card-body">
                     Hello!
@@ -38,7 +38,7 @@
     const app = {
         data() {
             return {
-                demo1IsActive: false
+                modalIsActive: false
             }
         }
     };
