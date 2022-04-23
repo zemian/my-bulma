@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "sass --watch styles.scss styles.css",
+    "server": "http-server",
     "build": "sass styles.scss styles.css"
   },
   "keywords": [],

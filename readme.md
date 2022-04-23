@@ -9,12 +9,15 @@ so I can see the affect of changing the Sass variables and other variables adjus
 ```
 npm install
 npm run build
+
+# Or you can watch the styles.scss for changes and auto compile
+npm run dev
 ```
 
 ## How to view the examples
 
 ```
-npx http-server
+npm run server
 open http://127.0.0.1:8080/
 open http://127.0.0.1:8080/components/
 open http://127.0.0.1:8080/layout/
