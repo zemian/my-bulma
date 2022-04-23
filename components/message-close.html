@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS - Components</title>
+</head>
+<body>
+
+<!-- Requires JS Support -->
+<div id="app" class="section">
+    <div class="container block">
+        <div class="columns">
+            <button class="button" v-if="!demoIsActive" @click="demoIsActive = !demoIsActive">Open</button>
+
+            <div class="column is-one-third is-offset-one-third">
+                <article class="message is-info" v-if="demoIsActive">
+                    <div class="message-header">
+                        Info
+                        <button class="delete" @click="demoIsActive = !demoIsActive"></button>
+                    </div>
+                    <div class="message-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                demoIsActive: true
+            }
+        }
+    };
+    Vue.createApp(app).mount('#app');
+</script>
+
+</body>
+</html>
