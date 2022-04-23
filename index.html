@@ -12,12 +12,12 @@
 <body>
 
 <div class="section">
-    <div class="container">
+    <div class="container block">
 
         <h1 class="title">BulmaCSS Basic Elements</h1>
         <p class="subtitle">See <a href="https://bulma.io/documentation/">documentation</a> for more.</p>
 
-        <h2 class="is-size-3">Colors</h2>
+        <h2 class="title is-size-4">Colors</h2>
         <div class="columns">
             <div class="column">
                 <div class="notification is-primary">
@@ -52,8 +52,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Grayscales</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Grayscales</h2>
         <div class="columns">
             <div class="column">
                 <div class="notification has-background-white">
@@ -117,8 +117,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Tag, Notification and Message</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Tag, Notification and Message</h2>
         <div class="columns">
             <div class="column is-one-third">
                 <div class="block">
@@ -146,17 +146,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Progress bars</h2>
-        <!-- Set value attribute to make progress stop running -->
-        <div>
-            <progress class="progress is-small is-primary" max="100">15%</progress>
-            <progress class="progress is-danger" max="100">30%</progress>
-            <progress class="progress is-medium is-dark" max="100">45%</progress>
-            <progress class="progress is-large is-info" max="100">60%</progress>
-        </div>
-
-        <h2 class="is-size-3">Icons</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Icons</h2>
         <div class="level">
             <div class="level-item">
                 <span class="icon">
@@ -176,8 +167,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Buttons</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Buttons</h2>
         <div class="buttons">
             <button class="button">Action</button>
             <button class="button is-primary">Action</button>
@@ -189,8 +180,8 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Form</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Form - Login</h2>
         <div class="columns">
             <div class="column is-one-third">
                 <form class="box">
@@ -214,8 +205,112 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Table</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Form - General</h2>
+        <div class="columns">
+            <div class="column is-one-third">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Text input">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                    <p class="help is-success">This username is available</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">Subject</label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option>Select dropdown</option>
+                                <option>With options</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="question">
+                            Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="question">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container block">
+        <h2 class="title is-size-4">Progress bars</h2>
+        <!-- Set value attribute to make progress stop running -->
+        <div>
+            <progress class="progress is-small is-primary" max="100">15%</progress>
+            <progress class="progress is-danger" max="100">30%</progress>
+            <progress class="progress is-medium is-dark" max="100">45%</progress>
+            <progress class="progress is-large is-info" max="100">60%</progress>
+        </div>
+    </div>
+
+
+    <div class="container block">
+        <h2 class="title is-size-4">Table</h2>
         <table class="table">
             <thead>
             <tr>
@@ -515,8 +610,8 @@
         </table>
     </div>
 
-    <div class="container">
-        <h2 class="is-size-3">Images</h2>
+    <div class="container block">
+        <h2 class="title is-size-4">Images</h2>
         <div class="level">
             <div class="level-item">
                 <figure class="image is-128x128">
