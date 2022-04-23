@@ -11,14 +11,15 @@
 <body>
 
 <!-- Requires JS Support -->
-<div class="section">
+<div id="app" class="section">
     <div class="container block">
-        <div class="modal is-active">
+        <button class="button" @click="demo1IsActive = !demo1IsActive">Open</button>
+        <div class="modal" :class="{'is-active': demo1IsActive}">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
                     <p class="modal-card-title">Modal title</p>
-                    <button class="delete" aria-label="close"></button>
+                    <button class="delete" aria-label="close" @click="demo1IsActive = !demo1IsActive"></button>
                 </header>
                 <section class="modal-card-body">
                     Hello!
@@ -31,6 +32,18 @@
         </div>
     </div>
 </div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                demo1IsActive: false
+            }
+        }
+    };
+    Vue.createApp(app).mount('#app');
+</script>
 
 </body>
 </html>
