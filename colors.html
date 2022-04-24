@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
     <title>BulmaCSS - Color</title>
+    <style>
+        .palette-name {
+            width: 7rem; height: 3rem; display: flex; align-items: center; justify-content: center;
+        }
+        .palette-color {
+            width: 5rem; height: 3rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;
+        }
+        .palette-code {
+            font-family: monospace; font-size: .75rem; display: flex; align-items: center; justify-content: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,15 +33,14 @@
             <p>If you just want a set of coordinated color palette, you may want to try
                 <a href="https://coolors.co/palettes/trending">Coolors.co Palettes</a> instead.</p>
         </div>
-        <table class="table">
+        <table class="table is-size-6">
             <tr v-for="(shades, name) in colors">
                 <td>
-                    <div style="width: 7rem; height: 3rem; display: flex; align-items: center; justify-content: center;">{{name}}</div>
+                    <div class="palette-name">{{name}}</div>
                 </td>
                 <td v-for="(color, shade) in shades">
-                    <div style="width: 6rem; height: 3rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;"
-                          :style="{'background-color': color, 'color': textColor(shade)}">{{shade}}</div>
-                    <div style="font-family: monospace; font-size: .75rem; display: flex; align-items: center; justify-content: center;">{{color}}</div>
+                    <div class="palette-color" :style="{'background-color': color, 'color': textColor(shade)}">{{shade}}</div>
+                    <div class="palette-code">{{color}}</div>
                 </td>
             </tr>
         </table>
