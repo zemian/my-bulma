@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS</title>
+
+    <style>
+        /* https://coolors.co/ff5e5b-d8d8d8-ffffea-00cecb-ffed66 */
+        * {
+            /* CSS HEX */
+            --orange-red-crayola: #ff5e5bff;
+            --gainsboro: #d8d8d8ff;
+            --ivory: #ffffeaff;
+            --robin-egg-blue: #00cecbff;
+            --corn: #ffed66ff;
+        }
+        .bg-primary {
+            background-color: var(--robin-egg-blue);
+        }
+        .bg-secondary {
+            background-color: var(--corn);
+        }
+        .bg-tertiary {
+            background-color: var(--orange-red-crayola);
+        }
+        .bg-quaternary {
+            background-color: var(--ivory);
+        }
+        .bg-quinary {
+            background-color: var(--gainsboro);
+        }
+        .h-15 {
+            height: 15rem;
+        }
+        .is-centered {
+            display: flex; align-items: center; justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column" v-for="color in colors">
+                <div class="notification h-15 is-centered" :class="['bg-' + color.name]">
+                    {{color.name}}
+                    <span class="is-family-monospace">{{color.code}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                colors: [
+                    {name: "primary", code: "#00cecbff", codeName: "robin-egg-blue"},
+                    {name: "secondary", code: "#ffed66ff", codeName: "corn"},
+                    {name: "tertiary", code: "#ff5e5bff", codeName: "orange-red-crayola"},
+                    {name: "quaternary", code: "#ffffeaff", codeName: "ivory"},
+                    {name: "quinary", code: "#d8d8d8ff", codeName: "gainsboro"},
+                ]
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
+</body>
+</html>
