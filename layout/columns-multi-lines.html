@@ -12,13 +12,27 @@
 
 <div class="section">
     <div class="container block">
-        <div class="columns">
-            <div class="column is-one-third is-offset-one-third">
-                TEST
+        <div class="columns is-gapless is-multiline">
+            <div class="column" v-for="i in 30">
+                <div class="notification is-primary m-1">
+                    <div class="is-flex-centered">TEST_BLOCK#{{i}}</div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
 
 </body>
 </html>

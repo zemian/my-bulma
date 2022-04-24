@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS - Layout</title>
+    <style>
+        .columns .column {
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column m-1 is-four-fifths has-background-primary">is-four-fifths</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-three-quarters has-background-primary">is-three-quarters</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-two-thirds has-background-primary">is-two-thirds</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-three-fifths has-background-primary">is-three-fifths</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-half has-background-primary">is-half</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-two-fifths has-background-primary">is-two-fifths</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-one-third has-background-primary">is-one-third</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-one-quarter has-background-primary">is-one-quarter</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+
+        <div class="columns">
+            <div class="column m-1 is-one-fifth has-background-primary">is-one-fifth</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+            <div class="column m-1 has-background-grey-lighter">Auto</div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad architecto aspernatur aut beatae corporis et eveniet excepturi exercitationem harum, illo iste magni non optio quaerat quisquam rem voluptate! Architecto!'
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
+
+</body>
+</html>

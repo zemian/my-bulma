@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS - Layout</title>
+</head>
+<body>
+
+<div class="section">
+    <div class="container block">
+        <div class="columns">
+            <div class="column" v-for="i in 12">
+                <div class="notification is-primary">
+                    <div class="is-flex-centered">{{i}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container block">
+        <div class="columns">
+            <div class="column" v-for="i in 6">
+                <div class="notification is-primary">
+                    <div class="is-flex-centered">{{i}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container block">
+        <div class="columns">
+            <div class="column" v-for="i in 3">
+                <div class="notification is-primary">
+                    <div class="is-flex-centered">{{i}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container block">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <div class="notification is-primary">
+                    <div class="is-flex-centered">A</div>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="notification is-primary">
+                    <div class="is-flex-centered">B</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
+
+</body>
+</html>

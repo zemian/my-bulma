@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS - Layout</title>
+</head>
+<body>
+
+<div class="section">
+    <div class="container block">
+        <div class="columns is-gapless">
+            <div class="column">
+                <div class="message is-primary">
+                    <div class="message-body">
+                        {{message}}
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="message is-secondary">
+                    <div class="message-body">
+                        {{message}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad architecto aspernatur aut beatae corporis et eveniet excepturi exercitationem harum, illo iste magni non optio quaerat quisquam rem voluptate! Architecto!'
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
+
+</body>
+</html>
