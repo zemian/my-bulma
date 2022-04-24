@@ -1,7 +1,8 @@
-// https://tailwindcss.com/docs/customizing-colors
-// https://www.tailwindshades.com/
-// We use the name and base color from Tailwind and feed it to the "tailwindshades" tool to generate the following
-// color palette.
+// List of predefined colors and their shade variants. We use the name and base color from [TailwindCSS Colors](https://tailwindcss.com/docs/customizing-colors)
+// and feed it to the [TailwindShades](https://www.tailwindshades.com/) tool to generate the following color shades list.
+//
+// If you just want a set of coordinated color palette, you may want to try
+// [Coolors Palettes](https://coolors.co/palettes/trending) instead.
 const MY_COLOR_SHADES = {
     'slate': {  DEFAULT: '#64748B',  '50': '#CCD2DA',  '100': '#C0C8D2',  '200': '#A9B3C1',  '300': '#919EB0',  '400': '#79899F',  '500': '#64748B',  '600': '#4D596A',  '700': '#353E4A',  '800': '#1E2229',  '900': '#060708'},
     'gray': {  DEFAULT: '#6B7280',  '50': '#CDD0D5',  '100': '#C2C5CC',  '200': '#ACB0BA',  '300': '#969BA7',  '400': '#7F8694',  '500': '#6B7280',  '600': '#515761',  '700': '#383C43',  '800': '#1E2024',  '900': '#050506'},
