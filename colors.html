@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <title>BulmaCSS - Color</title>
+</head>
+<body>
+
+<div class="section">
+    <div class="container">
+        <table class="table">
+            <tr v-for="(shades, name) in colors">
+                <td>
+                    <div style="width: 7rem; height: 3rem; display: flex; align-items: center; justify-content: center;">{{name}}</div>
+                </td>
+                <td v-for="(color, shade) in shades">
+                    <div style="width: 6rem; height: 3rem; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem;"
+                          :style="{'background-color': color, 'color': textColor(shade)}">{{shade}}</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="colors.js"></script>
+<script src="node_modules/vue/dist/vue.global.prod.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                colors: MY_COLOR_SHADES
+            }
+        },
+        methods: {
+            textColor(shade) {
+                return parseInt(shade) >= 500 ? 'white' : 'black';
+            }
+        }
+    };
+    Vue.createApp(app).mount('body');
+</script>
+
+</body>
+</html>
