@@ -1,12 +1,21 @@
 // Sizing helpers
 .is-min-h-full { min-height: 100%; }
 .is-min-h-screen { min-height: 100vh; }
+.is-min-w-full { min-width: 100%; }
+.is-min-w-screen { min-width: 100vw; }
 .is-h-screen { height: 100vh; }
 .is-h-full { height: 100%; }
+.is-w-screen { width: 100vw; }
+.is-w-full { width: 100%; }
 
 // Flex Helper
-.flex-centered {
+.is-flex-centered {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// Borders
+.has-round-corner {
+  border-radius: 0.5rem;
 }
